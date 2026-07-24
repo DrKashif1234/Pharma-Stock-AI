@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #cfe9e2;
+}
+
+/* Signature element: a vertical "vial fill" indicator that encodes stock
+   level as a literal fill height, echoing a medicine vial/ampoule. Used
+   consistently on table rows and cards throughout the inventory views. */
+.vial {
+  position: relative;
+  width: 6px;
+  border-radius: 999px;
+  background: #e3ece9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.vial-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 999px;
+  transition: height 300ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vial-fill {
+    transition: none;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #0f6e5e;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar for chat / tables, kept subtle */
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: #cfe9e2;
+  border-radius: 999px;
+}
