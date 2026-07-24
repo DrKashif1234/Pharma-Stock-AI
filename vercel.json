@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/chat.ts": { "maxDuration": 30 },
-    "api/report.ts": { "maxDuration": 30 }
+    "api/chat.ts": { "maxDuration": 10 },
+    "api/report.ts": { "maxDuration": 10 }
   }
 }
